@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <h1 id="title">Registration Form</h1>
+      <p id="description">Fill out the form carefully for registration. Thank you!</p>
+      <form id="survey-form">
+        <fieldset>
+        <label id="name-label">First Name <input id="name" type="text" required placeholder="Enter Your Name">
+        </label>
+         <label id="name-label">Middle Name <input id="name" type="text" required placeholder="Enter Your Name">
+        </label>
+         <label id="name-label">Last Name <input id="name" type="text" required placeholder="Enter Your Name">
+        </label>
+       
+        <label id="email-label">Email  <input id="email" type="email" required placeholder="Enter Your Email">
+        </label>
+       <div class="">
+         <label id="number-label">Age  <input id="number" type="number" min="6" max="13" placeholder="Age" class="age">
+        </label>
+        </div>
+        <div>
+        <label>Department
+          <select id="dropdown">
+          <option>Select Current Department</option>
+          <option>IT Department</option>
+          <option>Web Developer</option>
+          <option>Detailer</option>
+          <option>Structural</option>
+          <option>Accounting</option>
+          <option>HR Department</option>
+        </select>
+        </label>
+      </div>
+        
+        </fieldset>
+        
+        <fieldset  class="gender">
+        <legend>Gender</legend>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Male</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Female</label>
+      </fieldset>
+         <label>Which option best describes your current role?
+          <select id="dropdown">
+          <option>Select Current Role</option>
+          <option>Student</option>
+          <option>Employee</option>
+        </select>  
+         </label>
+       
+      <fieldset class="bottom-fieldset">
+        <legend>Hobbies</legend>
+        <input type="checkbox" value="photography"> Photography
+        <input type="checkbox" value="hiking"> Hiking
+        <input type="checkbox" value="reading"> Reading
+        <input type="checkbox" value="dancing"> Dancing
+        <input type="checkbox" value="cooking"> Cooking
+        <input type="checkbox" value="others"> Others
+        <input type="text" placeholder="Others"> 
+        <textarea>Message</textarea>
+        <input id="submit" type="submit">
+        </fieldset>
+      </form>
+    </body>
+</html>
