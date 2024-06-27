@@ -3,8 +3,8 @@ body {
     height: 180vh;
     margin: 0;background-image: linear-gradient(
         115deg,
-        rgba(0, 0, 102, 0.8),
-        rgba(0, 0, 204, 0.7)
+        #0e3746c7,
+        #1d8a85c2
       ),
       url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
     background-size: cover;
@@ -53,7 +53,7 @@ body {
     margin: 1em auto;
     height: 2em;
     font-size: 1.1rem;
-    background-color:#0040ff;
+    background-color:#1d8a85c2;
     color:white;
     min-width: 300px;
   }

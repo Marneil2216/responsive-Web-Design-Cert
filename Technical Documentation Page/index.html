@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>C# Document</title>
+</head>
+<body>
+    <nav id="navbar"> 
+        <header>C# Documentation</header>
+        <ul>
+            <li> 
+                <a class="nav-link" href="#Getting_Started_With_C#">Getting Started With C#</a> 
+            </li>
+            <li> 
+                <a class="nav-link" href="#C#_Syntax">C# Syntax</a> 
+            </li>
+            <li> 
+                <a class="nav-link" href="#C#_Oerator">C# Oerator</a> 
+            </li>
+            <li> 
+                <a class="nav-link" href="#C#_Methods">C# Methods</a> 
+            </li>
+            <li> 
+                <a class="nav-link" href="#C#_OOP">C# OOP</a> 
+            </li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+
+    <!------GETTING STARTED C#------->
+        <section class="main-section" id="Getting_Started_With_C#">
+            <header>Getting Started With C#</header>
+            <p><u>Steps in getting started</u></p>
+            <ol>
+                <li>Install Visual Studio</li>
+                <li>Install .NET Core SDK</li>
+                <li>Create a new project</li>
+            </ol>
+        </section>
+
+    <!------C# SYNTAX------->
+        <section class="main-section" id="C#_Syntax">
+            <header>C# Syntax</header>
+            <p>In the previous chapter, we created a C# file called Program.cs, and we used the following code to print "Hello World" to the screen:</p>
+            <pre>
+                <code>
+                    using System;
+                        namespace HelloWorld
+                        {
+                            class Program
+                            {
+                                static void Main(string[] args)
+                                {
+                                Console.WriteLine("Hello World!");    
+                                }
+                            }
+                        }
+
+                        // Result: Hello Worl!
+                </code>
+            </pre>
+            <p><u>Example explained</u></p>
+            <p>Line 1: <i>using System</i> means that we can use classes from the <i>System</i> namespace.</p>
+            <p>Line 2: A blank line. C# ignores white space. However, multiple lines makes the code more readable.</p>
+            <p>Line 3: <i>namespace</i> is used to organize your code, and it is a container for classes and other namespaces.</p>
+            <p>Line 4: The curly braces <i>{}</i> marks the beginning and the end of a block of code.</p>
+            <p>Line 5: <i>class</i> is a container for data and methods, which brings functionality to your program. Every line of code that runs in C# must be inside a class. In our example, we named the class Program.</p>
+            <blockquote>
+                Don't worry if you don't understand how using System, namespace and class works. Just think of it as something that (almost) always appears in your program, and that you will learn more about them in a later chapter.
+            </blockquote>
+            <p>Line 7: Another thing that always appear in a C# program is the <i>Main</i> method. Any code inside its curly brackets <i>{}</i> will be executed. You don't have to understand the keywords before and after Main. You will get to know them bit by bit while reading this tutorial.</p>
+            <p>Line 9: <i>Console</i> is a class of the <i>System</i> namespace, which has a <i>WriteLine()</i> method that is used to output/print text. In our example, it will output "Hello World!".</p>
+            <p>If you omit the <i>using System</i> line, you would have to write <i>System.Console.WriteLine()</i> to print/output text.</p>
+        </section>
+
+    <!------C# OPERATOR------->
+        <section class="main-section" id="C#_Oerator">
+            <header>C# Oerator</header>
+            <p>Operators are used to perform operations on variables and values.</p>
+            <p>In the example below, we use the + operator to add together two values:</p>
+            <pre>
+                <code>
+                    int x = 100 + 50;
+                </code>
+            </pre>
+            <p>Although the + operator is often used to add together two values, like in the example above, it can also be used to add together a variable and a value, or a variable and another variable:</p>
+            <pre>
+                <code>
+                    int sum1 = 100 + 50;        // 150 (100 + 50)
+                    int sum2 = sum1 + 250;      // 400 (150 + 250)
+                    int sum3 = sum2 + sum2;     // 800 (400 + 400)
+                </code>
+            </pre>
+        </section>
+
+    <!------C# METHODS------->
+        <section class="main-section" id="C#_Methods">
+            <header>C# Methods</header>
+            <p>A method is a block of code which only runs when it is called.</p>
+            <p>You can pass data, known as parameters, into a method.</p>
+            <p>Methods are used to perform certain actions, and they are also known as functions.</p>
+            <p>Why use methods? To reuse code: define the code once, and use it many times.</p>
+            <p><u>Create a Method</u></p>
+            <p>A method is defined with the name of the method, followed by parentheses (). C# provides some pre-defined methods, which you already are familiar with, such as Main(), but you can also create your own methods to perform certain actions:</p>
+            <p>Create a method inside the Program class:</p>
+            <pre>
+                <code>
+                    class Program
+                    {
+                        static void MyMethod() 
+                            {
+                                // code to be executed
+                            }
+                    }
+                </code>
+            </pre>
+
+            <p><u>Example Explained</u></p>
+            <ol>
+                <li>MyMethod() is the name of the method</li>
+                <li>static means that the method belongs to the Program class and not an object of the Program class. You will learn more about objects and how to access methods through objects later in this tutorial.</li>
+                <li>void means that this method does not have a return value. You will learn more about return values later in this chapter</li>
+            </ol>
+            <p><u>Parameters and Arguments</u></p>
+            <p>Information can be passed to methods as parameter. Parameters act as variables inside the method.</p>
+            <p>They are specified after the method name, inside the parentheses. You can add as many parameters as you want, just separate them with a comma.</p>
+            <p>The following example has a method that takes a <i>string</i> called fname as parameter. When the method is called, we pass along a first name, which is used inside the method to print the full name:</p>
+            <pre>
+                <code>
+                    static void MyMethod(string fname) 
+                    {
+                        Console.WriteLine(fname + " Refsnes");
+                    }
+
+                    static void Main(string[] args)
+                    {
+                        MyMethod("Liam");
+                        MyMethod("Jenny");
+                        MyMethod("Anja");
+                    }
+
+                    // Liam Refsnes
+                    // Jenny Refsnes
+                    // Anja Refsnes
+                </code>
+            </pre>
+            <blockquote>
+                When a parameter is passed to the method, it is called an argument. So, from the example above: fname is a parameter, while Liam, Jenny and Anja are arguments.
+            </blockquote>
+        </section>
+
+    <!------C# OOP------->
+        <section class="main-section" id="C#_OOP">
+            <header>C# OOP</header>
+            <p>OOP stands for Object-Oriented Programming.</p>
+            <p>Procedural programming is about writing procedures or methods that perform operations on the data, while object-oriented programming is about creating objects that contain both data and methods.</p>
+            <p>Object-oriented programming has several advantages over procedural programming:</p>
+            <ol>
+                <li>OOP is faster and easier to execute</li>
+                <li>OOP provides a clear structure for the programs</li>
+                <li>OOP helps to keep the C# code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug</li>
+                <li>OOP makes it possible to create full reusable applications with less code and shorter development time</li>
+            </ol>
+            <p>Tip: The <i>"Don't Repeat Yourself" (DRY)</i> principle is about reducing the repetition of code. You should extract out the codes that are common for the application, and place them at a single place and reuse them instead of repeating it.</p>
+        </section>
+    <!------FOOTER------->   
+        <footer>
+            <p>(Concept From W3 Schools)</p>
+            <p><i>Developed by Marneil</p>
+        </footer>
+    </main>
+    
+</body>
+</html>
